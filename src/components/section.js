@@ -13,7 +13,9 @@ export default class Section extends React.Component {
         </Row>
         {
           this.props.items.map((item, index) =>
-            <Row><Item key={index} {...item} /></Row>)
+            <Row key={index}>
+              <Item {...item} />
+            </Row>)
         }
       </section>
     )

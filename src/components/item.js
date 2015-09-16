@@ -8,7 +8,7 @@ class LinkList extends React.Component {
       <div className='section__button-container'>
         {
           this.props.content.map((link, index) =>
-            <a href={link.url} target='_blank' className='btn btn-default'>
+            <a key={index} href={link.url} target='_blank' className='btn btn-default'>
               <i className={'fa fa-' + link.type} />
             </a>
           )
