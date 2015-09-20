@@ -4,8 +4,8 @@
 - Install [Node.js](http://nodejs.org)
 
 ```
- git clone git@github.com:leonidas/gulp-project-template.git <your project name>
- cd <your project name>
+ git clone git@github.com:dahllie/cv.git
+ cd cv
  npm install
  npm start
  open http://localhost:9001 in your browser
