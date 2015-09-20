@@ -1,9 +1,9 @@
 export default {
   personal: {
     name: "Hannu Pousi",
-    title: "// fullstack developer",
+    title: "// full-stack developer",
     picture: "pics/profile-pic.jpg",
-    description: "In a nushell <strong>creating great software</strong> is what makes me tick. I'm not talking about having a cup of tea and typing in the code with your favourite editor, but the whole <strong>collaborative process</strong> of crafting an initial idea into a finished software product. <strong>Buzz word complaint</strong> but not naïve."
+    description: "In a nutshell <strong>creating great software</strong> is what makes me tick. I'm not talking about having a cup of tea and typing in the code with your favourite editor, but the whole <strong>collaborative process</strong> of crafting an initial idea into a finished software product. <strong>Buzz word complaint</strong> but not naïve."
   },
   sections: [
     {
@@ -144,7 +144,7 @@ export default {
           label: "Master of Science (eng.)",
           school: "Tampere University of Technology",
           graduated: "2005",
-          content: "Graduated from information technology degree program with software engineering as main subject and hypermedia as subsidiary subject. Grade average and thesis grade were both very good."
+          content: "Graduated from information technology degree program with software engineering as main subject and hypermedia as subsidiary subject. Grade average and thesis grade were both \"very good\"."
         },
         {
           type: "education",
@@ -174,7 +174,7 @@ export default {
           label: "Design engineer",
           from: "Feb 2008",
           to: "Jul 2013",
-          content: "Worked as a project lead/manager and/or developer in multiple projects. Reponsibilities covered almost every aspect of software development from technology studies and architecture design to UX/IX design. Did also some client training and software methodology evaluations and helping putting them into daily project practices.",
+          content: "Worked as a project lead/manager and/or developer in multiple projects. Responsibilities covered almost every aspect of software development from technology studies and architecture design to UX/IX design. Did also some client training and software methodology evaluations and helping putting them into daily project practices.",
           keywords: ["C#", ".Net", "WPF", "MVVM", "WCF", "Linq", "SQL", "Java"]
         },
         {
@@ -192,7 +192,7 @@ export default {
           label: "Design engineer",
           from: "Nov 2005",
           to: "Sep 2007",
-          content: "Implementation and testing of distributed FAF ADCC system user interfaces and back-end. Also worked in a research project which studied and evaluated suitability of new techonologies and software tools. This included developing higher level architecture for the legacy system using rapid prototyping.",
+          content: "Implementation and testing of distributed FAF ADCC system user interfaces and back-end. Also worked in a research project which studied and evaluated suitability of new technologies and software tools. This included developing higher level architecture for the legacy system using rapid prototyping.",
           keywords: ["C++", "Java", "Spring", "Software architecture", "GIS", "Web services"]
         },
         {
@@ -213,12 +213,12 @@ export default {
         {
           type: "text",
           label: "Sports",
-          content: "Badminton, Les Mills classes, jogging, snowboarding to name few. Excercising regularly 4 to 6 times a week is essential in trying to keep body and mind in shape."
+          content: "Badminton, Les Mills classes, jogging, snowboarding to name few. Exercising regularly 4 to 6 times a week is essential in trying to keep body and mind in shape."
         },
         {
           type: "text",
           label: "Food and wine",
-          content: "Excercising requires good food - or the other way around. Either way I enjoy good food whether it's trying out a new local restaurant or experimenting in kitchen at home."
+          content: "Exercising requires good food - or the other way around. Either way I enjoy good food whether it's trying out a new local restaurant or experimenting in kitchen at home."
         },
         {
           type: "text",
