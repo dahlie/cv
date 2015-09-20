@@ -1,5 +1,7 @@
 # Personal CV
 
+Latests version http://dahlie.github.io/cv/
+
 ## Getting things up and running
 - Install [Node.js](http://nodejs.org)
 
