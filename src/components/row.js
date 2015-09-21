@@ -1,4 +1,6 @@
 import React from 'react'
+import polyfill from 'object.assign/polyfill'
+const assign = polyfill()
 
 export class Row extends React.Component {
   render() {
@@ -24,13 +26,13 @@ Row.defaultProps = {
 
 export class Separator extends Row { }
 
-Separator.defaultProps = Object.assign({}, Row.defaultProps, {
+Separator.defaultProps = assign({}, Row.defaultProps, {
   classNames: 'timeline__margin',
 })
 
 export class Terminator extends Row { }
 
-Terminator.defaultProps = Object.assign({}, Row.defaultProps, {
+Terminator.defaultProps = assign({}, Row.defaultProps, {
   classNames: 'timeline__margin',
   rowType: 'end'
 })
