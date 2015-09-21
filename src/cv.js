@@ -63,7 +63,7 @@ export default {
             },
             {
               label: "English",
-              description: "Full professional profiency"
+              description: "Full professional proficiency"
             }
           ]
         },
