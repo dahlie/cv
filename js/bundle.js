@@ -20727,7 +20727,7 @@ exports["default"] = {
     name: "Hannu Pousi",
     title: "// full-stack developer",
     picture: "pics/profile-pic.jpg",
-    description: "In a nutshell <strong>creating great software</strong> is what makes me tick. I'm not talking about having a cup of tea and typing in the code with your favourite editor, but the whole <strong>collaborative process</strong> of crafting an initial idea into a finished software product. <strong>Buzz word complaint</strong> but not naïve."
+    description: "In a nutshell <strong>creating great software</strong> is what makes me tick. I'm not talking about having a cup of tea and typing in the code with your favourite editor, but the whole <strong>collaborative process</strong> of crafting an initial idea into a finished software product. <strong>Buzz word compliant</strong> but not naïve."
   },
   sections: [{
     id: "profile",
