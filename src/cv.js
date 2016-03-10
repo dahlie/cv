@@ -73,7 +73,7 @@ export default {
           content: [
             {
               label: "Javascript/Coffeescript",
-              description: "2+ years of experience developing SPAs using modern JS-frameworks like React.js, Angular.js and Knockout.js. Also familiar with JS ecosystem (npm, bower, Gulp), Node.js and ES6."
+              description: "3+ years of experience developing SPAs using modern JS frameworks/libraries like React.js, Angular.js and Knockout.js. Also familiar with JS ecosystem (npm, bower, Gulp, webpack), Node.js and ES6."
             },
             {
               label: "HTML/CSS",

@@ -1,8 +1,7 @@
-'use strict';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import cv from './cv';
 
-import React from 'react'
-import cv from './cv'
+import Profile from './components/profile';
 
-import Profile from './components/profile'
-
-React.render(<Profile data={cv} />, document.body)
+ReactDOM.render(<Profile data={cv} />, document.getElementById('app'));

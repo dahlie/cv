@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-import { Row, Separator } from './row'
-import Item from './item'
+import { Row, Separator } from './row';
+import Item from './item';
 
-export default class Section extends React.Component {
+export default class Section extends Component {
   render() {
+    const { id, title, items } = this.props;
+
     return (
-      <section className={'timeline ' + this.props.id}>
+      <section className={'timeline ' + id}>
         <Separator />
         <Row rowType='title'>
-          <h2 className='section__title'>{this.props.title}</h2>
+          <h2 className='section__title'>{title}</h2>
         </Row>
         {
-          this.props.items.map((item, index) =>
+          items.map((item, index) =>
             <Row key={index}>
               <Item {...item} />
             </Row>)

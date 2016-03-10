@@ -1,38 +1,35 @@
-import React from 'react'
+import React, { Component } from 'react'
 import polyfill from 'object.assign/polyfill'
 const assign = polyfill()
 
-export class Row extends React.Component {
-  render() {
-    return (
-      <div className={'row line ' + this.props.classNames}>
-        <div className='col-md-1 hidden-sm hidden-xs' />
-        <div className={'col-md-2 hidden-sm hidden-xs timeline__' + this.props.rowType} />
-        <div className='col-md-8 timeline__item'>
-          <div className='line-content'>
-            {this.props.children}
+function createRow(classNames = '', rowType = 'progress') {
+  return class Row extends Component {
+    static defaultProps = {
+      classNames,
+      rowType
+    }
+
+    render() {
+      const { classNames, rowType, children } = this.props;
+
+      return (
+        <div className={'row line ' + classNames}>
+          <div className='col-md-1 hidden-sm hidden-xs' />
+          <div className={'col-md-2 hidden-sm hidden-xs timeline__' + rowType} />
+          <div className='col-md-8 timeline__item'>
+            <div className='line-content'>
+              {children}
+            </div>
           </div>
+          <div className='col-md-1 hidden-sm hidden-xs' />
         </div>
-        <div className='col-md-1 hidden-sm hidden-xs' />
-      </div>
-    )
-  }
+      )
+    }
+  };
 }
 
-Row.defaultProps = {
-  classNames: '',
-  rowType: 'progress'
-}
+export const Row = createRow();
 
-export class Separator extends Row { }
+export const Separator = createRow('timeline__margin');
 
-Separator.defaultProps = assign({}, Row.defaultProps, {
-  classNames: 'timeline__margin',
-})
-
-export class Terminator extends Row { }
-
-Terminator.defaultProps = assign({}, Row.defaultProps, {
-  classNames: 'timeline__margin',
-  rowType: 'end'
-})
+export const Terminator = createRow('timeline__margin', 'end')

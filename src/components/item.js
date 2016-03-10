@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import { Row, Separator } from './row'
 
-class LinkList extends React.Component {
+class LinkList extends Component {
   render() {
+    const { content } = this.props;
+
     return (
       <div className='section__button-container'>
         {
-          this.props.content.map((link, index) =>
+          content.map((link, index) =>
             <a key={index} href={link.url} target='_blank' className='btn btn-default'>
               <i className={'fa fa-' + link.type} />
             </a>
@@ -18,12 +20,14 @@ class LinkList extends React.Component {
   }
 }
 
-class SkillList extends React.Component {
+class SkillList extends Component {
   render() {
+    const { content } = this.props;
+
     return (
       <ul className='skills__list'>
         {
-          this.props.content.map((item, index) =>
+          content.map((item, index) =>
             <li key={index}>{item.label}<span className='skills__desc'>{item.description}</span></li>)
         }
       </ul>
@@ -31,60 +35,65 @@ class SkillList extends React.Component {
   }
 }
 
-class SchoolDetails extends React.Component {
+class SchoolDetails extends Component {
   render() {
+    const { school, graduated, content } = this.props;
+
     return (
       <div>
         <h4 className='section__item-subtitle'>
           <i className='fa fa-university' />
-          <span>{this.props.school}</span>
-          <span className='section__item-subtitle-time'>Graduated {this.props.graduated}</span>
+          <span>{school}</span>
+          <span className='section__item-subtitle-time'>Graduated {graduated}</span>
         </h4>
-        <p className='section__item-content'>{this.props.content}</p>
+        <p className='section__item-content'>{content}</p>
       </div>
     )
   }
 }
 
-class JobDetails extends React.Component {
+class JobDetails extends Component {
   render() {
-    let keywords = this.props.keywords || []
-
-    if (keywords.length)
-      keywords = <p className='section__item-content section__item-keywords'>Keywords: {keywords.join(', ')}</p>
-    else
-      keywords = null
+    const { keywords, from, to, content, label } = this.props;
 
     return (
       <div>
         <h4 className='section__item-subtitle'>
           <i className='fa fa-briefcase' />
-          <span>{this.props.label}</span>
-          <span className='section__item-subtitle-time'>{this.props.from} - {this.props.to}</span>
+          <span>{label}</span>
+          <span className='section__item-subtitle-time'>{from} - {to}</span>
         </h4>
-        <p className='section__item-content'>{this.props.content}</p>
-        {keywords}
+        <p className='section__item-content'>{content}</p>
+        {
+          keywords && keywords.length
+            ? <p className='section__item-content section__item-keywords'>Keywords: {keywords.join(', ')}</p>
+            : null
+        }
       </div>
     )
   }
 }
 
-export default class Item extends React.Component {
+export default class Item extends Component {
   render() {
+    const { label } = this.props;
+
     return (
       <div>
-        <h3 className='section__item-title'>{this.props.label}</h3>
-        <p className='section__item-content'>
+        <h3 className='section__item-title'>{label}</h3>
+        <div className='section__item-content'>
           { this.renderContent() }
-        </p>
+        </div>
       </div>
     )
   }
 
   renderContent() {
-    switch (this.props.type) {
+    const { type, content } = this.props;
+
+    switch (type) {
       case 'text':
-        return this.props.content
+        return content
       case 'links':
         return <LinkList {...this.props} />
       case 'list':
