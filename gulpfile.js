@@ -4,6 +4,7 @@
 var browserify = require('browserify');
 var browserSync = require('browser-sync');
 var duration = require('gulp-duration');
+var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var jade = require('gulp-jade');
@@ -206,7 +207,12 @@ gulp.task('replace-revision-references', ['revision', 'templates'], function() {
 
 gulp.task('build', function() {
   rimraf.sync(config.destination);
-  gulp.start(buildTasks.concat(['scripts', 'revision', 'replace-revision-references']));
+  return gulp.start(buildTasks.concat(['scripts', 'revision', 'replace-revision-references']));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', buildTasks.concat(['watch', 'server']));
