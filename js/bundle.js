@@ -21234,7 +21234,7 @@ exports.default = {
         description: "3+ years of experience developing SPAs using modern JS frameworks/libraries like React.js, Angular.js and Knockout.js. Also familiar with JS ecosystem (npm, bower, Gulp, webpack), Node.js and ES6."
       }, {
         label: "HTML/CSS",
-        description: "Good understanding of basic concepts in both HTML and CSS (Jade, Stylus)."
+        description: "Good understanding in both HTML and CSS (Jade, Stylus)."
       }, {
         label: "C#",
         description: "5+ years of experience developing .NET desktop applications and back-end solutions (WPF, WCF, Asp.Net MVC3, Prism, NInject)."
