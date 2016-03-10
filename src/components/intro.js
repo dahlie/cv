@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 export default class Intro extends Component {
   render() {
-    const {picture, name, title } = this.props;
+    const { picture, name, title } = this.props;
 
     const description = {
-      __html: this.description
+      __html: this.props.description
     };
 
     return (
