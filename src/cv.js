@@ -77,7 +77,7 @@ export default {
             },
             {
               label: "HTML/CSS",
-              description: "Good understanding of basic concepts in both HTML and CSS (Jade, Stylus)."
+              description: "Good understanding in both HTML and CSS (Jade, Stylus)."
             },
             {
               label: "C#",
