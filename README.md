@@ -6,7 +6,7 @@ Latests version http://dahlie.github.io/cv/
 - Install [Node.js](http://nodejs.org)
 
 ```
- git clone git@github.com:dahllie/cv.git
+ git clone git@github.com:dahlie/cv.git
  cd cv
  npm install
  npm start
