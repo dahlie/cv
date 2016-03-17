@@ -20750,6 +20750,7 @@ var JobDetails = _wrapComponent('JobDetails')(function (_Component4) {
       var from = _props2.from;
       var to = _props2.to;
       var content = _props2.content;
+      var company = _props2.company;
       var label = _props2.label;
 
 
@@ -20763,7 +20764,7 @@ var JobDetails = _wrapComponent('JobDetails')(function (_Component4) {
           _react3.default.createElement(
             'span',
             null,
-            label
+            company
           ),
           _react3.default.createElement(
             'span',
