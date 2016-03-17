@@ -54,13 +54,13 @@ class SchoolDetails extends Component {
 
 class JobDetails extends Component {
   render() {
-    const { keywords, from, to, content, label } = this.props;
+    const { keywords, from, to, content, company, label } = this.props;
 
     return (
       <div>
         <h4 className='section__item-subtitle'>
           <i className='fa fa-briefcase' />
-          <span>{label}</span>
+          <span>{company}</span>
           <span className='section__item-subtitle-time'>{from} - {to}</span>
         </h4>
         <p className='section__item-content'>{content}</p>
