@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import Intro from './intro';
-import Section from './section';
-import { Terminator } from './row';
+import Intro from '../Intro';
+import Section from '../Section';
+import { Terminator } from '../Layout';
 
-export default class Profile extends Component {
+import './profile.scss';
+
+export default class Profile extends React.PureComponent {
   render() {
     const { data } = this.props;
     const { personal, sections } = data;
@@ -12,7 +14,7 @@ export default class Profile extends Component {
     return (
       <div className='container'>
         <div className='row'>
-          <div className='col-md-10 col-sm-10 col-md-offset-2 col-sm-offset-1 resume-container'>
+          <div className='col-md-12 col-sm-12 resume-container'>
             <Intro {...personal} />
             <div className='timeline__wrap'>
               {sections.map((section, index) => <Section key={index} {...section} /> )}

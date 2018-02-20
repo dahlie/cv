@@ -1,0 +1,46 @@
+.timeline__wrap {
+  position: relative;
+  top: 0px;
+}
+
+.timeline__margin {
+  height: 100px;
+}
+
+.timeline__item,
+.timeline__space {
+  padding: 10px 0;
+}
+
+.timeline__title {
+  background: url('../../assets/pics/section.png') no-repeat center center;
+}
+
+.timeline__progress {
+  background: url('../../assets/pics/timeline.png') repeat-y center center;
+}
+
+.timeline__end {
+  background: url('../../assets/pics/end.png') no-repeat center center;
+  height: 100px;
+}
+
+@media (min-width: 992px) {
+  .timeline__wrap {
+    top: -74px;
+  }
+
+  .timeline__margin {
+    height: 100px;
+  }
+
+  .row {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .timeline__wrap {
+    top: 0px;
+  }
+}

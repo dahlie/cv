@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-import { Row, Separator } from './row'
+import { Row, Separator } from '../Layout'
+
+import './item.scss';
 
 class LinkList extends Component {
   render() {

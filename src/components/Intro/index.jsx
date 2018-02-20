@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './intro.scss';
+
 export default class Intro extends Component {
   render() {
     const { picture, name, title } = this.props;
@@ -15,7 +17,7 @@ export default class Intro extends Component {
             <img src={picture}></img>
           </div>
         </div>
-        <div className='col-md-7'>
+        <div className='col-md-8'>
           <h1 className='intro__header'>
             Hi, I'm
             <span className='intro__header-name'>{name}!</span>

@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { Row, Separator } from './row';
-import Item from './item';
+import { Row, Separator } from '../Layout';
+import Item from '../Item';
 
-export default class Section extends Component {
+import './section.scss';
+
+export default class Section extends React.PureComponent {
   render() {
     const { id, title, items } = this.props;
 
