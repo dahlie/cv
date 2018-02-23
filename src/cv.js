@@ -3,7 +3,7 @@ export default {
     name: "Hannu Pousi",
     title: "// full-stack developer",
     picture: "pics/profile-pic.jpg",
-    description: "In a nutshell <strong>creating great software</strong> is what makes me tick. I'm not talking about having a cup of tea and typing in the code with your favourite editor, but the whole <strong>collaborative process</strong> of crafting an initial idea into a finished software product. <strong>Buzz word compliant</strong> but not naïve."
+    description: "I'm experienced full-stack developer driven by the end results. I'm intrigued by the collaborative process of crafting the initial idea into a finished and polished software product. Buzz word compliant but pracmatic."
   },
   sections: [
     {
@@ -44,6 +44,10 @@ export default {
             {
               type: "linkedin",
               url: "https://linkedin.com/in/HannuPousi"
+            },
+            {
+              type: "medium",
+              url: "https://medium.com/@hannu.pousi"
             }
           ]
         }
@@ -72,8 +76,8 @@ export default {
           label: "Programming",
           content: [
             {
-              label: "Javascript/Coffeescript",
-              description: "3+ years of experience developing SPAs using modern JS frameworks/libraries like React.js, Angular.js and Knockout.js. Also familiar with JS ecosystem (npm, bower, Gulp, webpack), Node.js and ES6."
+              label: "Javascript",
+              description: "5+ years of experience in front-end and back-end applications written using React/Redux, Node.js and Angular.js. Also proficient with build tools such as Webpack and Gulp."
             },
             {
               label: "HTML/CSS",
@@ -103,7 +107,7 @@ export default {
           content: [
             {
               label: "Databases",
-              description: "Many years experience with different SQL DBs and ORMs. Also familiar with MongoDB, Redis, Elastic."
+              description: "Many years experience in different SQL DBs and ORMs. Also familiar with MongoDB, Redis, Elastic."
             },
             {
               label: "Agile",
@@ -111,7 +115,7 @@ export default {
             },
             {
               label: "Test automation",
-              description: "8+ years experience in test automation including TDD, BDD and integration testing (Protractor, Capybara, RSpec)."
+              description: "10+ years experience in test automation including TDD, BDD and integration testing (xUnit, Mocha, Jest, Protractor, Capybara, RSpec)."
             },
             {
               label: "Version control",
@@ -125,11 +129,11 @@ export default {
           content: [
             {
               label: "Project management",
-              description: "6+ years experience managing different sized projects and customers."
+              description: "6+ years experience managing software projects and customers."
             },
             {
               label: "Training",
-              description: "Experienced in customer and internal training."
+              description: "Held multiple technical and non-technical internal and customer trainings."
             }
           ]
         }
@@ -161,12 +165,21 @@ export default {
       items: [
         {
           type: "work",
+          company: "Nokia Technologies Oy",
+          label: "Senior Software Engineer (full-stack)",
+          from: "Aug 2016",
+          to: "present",
+          content: "Tech lead in medical IoT system front-end team. Also worked on Node.js based microservices.",
+          keywords: ["React", "Redux", "Node.js", "IoT", 'Microservices', 'Docker']
+        },
+        {
+          type: "work",
           company: "Leonidas Oy",
-          label: "Developer Extraordinare",
+          label: "Senior Software Engineer",
           from: "Aug 2013",
-          to: "Present",
-          content: "Worked as project lead and/or developer in multiple projects with public and private sector clients. All implemented front-ends were complex SPA applications using React.js and Angular.js. Also worked in back-end development using Clojure and Java.",
-          keywords: ["React.js", "Angular.js", "SPA", "Node.js", "Clojure", "Java", "Jade", "Stylus", "SQL", "MongoDB"]
+          to: "Jul 2016",
+          content: "Project lead and/or developer in multiple projects with public and private sector clients. All implemented front-ends were complex SPA applications using React.js and Angular.js. Also implemented back-end features using Clojure and Java.",
+          keywords: ["React", "Redux", "Angular.js", "SPA", "Node.js", "Clojure", "Java", "Jade", "Stylus", "SQL", "MongoDB"]
         },
         {
           type: "work",
@@ -174,7 +187,7 @@ export default {
           label: "Design engineer",
           from: "Feb 2008",
           to: "Jul 2013",
-          content: "Worked as a project lead/manager and/or developer in multiple projects. Responsibilities covered almost every aspect of software development from technology studies and architecture design to UX/IX design. Did also some client training and software methodology evaluations and helping putting them into daily project practices.",
+          content: "Project lead/manager and/or developer in multiple projects. Responsibilities covered almost every aspect of software development from technology studies and architecture design to UX/IX design. Did also some client training and software methodology evaluations and helping putting them into daily project practices.",
           keywords: ["C#", ".Net", "WPF", "MVVM", "WCF", "Linq", "SQL", "Java"]
         },
         {
@@ -213,7 +226,7 @@ export default {
         {
           type: "text",
           label: "Sports",
-          content: "Badminton, Les Mills classes, jogging, snowboarding to name few. Exercising regularly 4 to 6 times a week is essential in trying to keep body and mind in shape."
+          content: "Badminton, Les Mills classes, jogging, snowboarding to name few. Trying to exercising regularly to keep body and mind in shape."
         },
         {
           type: "text",
