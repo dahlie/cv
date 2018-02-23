@@ -4,15 +4,15 @@ import './layout.scss';
 
 const createRowComponent = (classNames = '', rowType = 'progress') => {
   const RowComponent = ({ classNames, rowType, children }) => (
-    <div className={'row line ' + classNames}>
-      <div className='col-md-1 d-sm-none d-xs-none' />
-      <div className={'col-md-2 d-sm-none d-xs-none timeline__' + rowType} />
-      <div className='col-md-8 timeline__item'>
+    <div className={'row ' + classNames}>
+      <div className='col-1 d-sm-none d-md-block' />
+      <div className={'col-2 d-sm-none d-md-block timeline__' + rowType} />
+      <div className='col-8 col-sm-12 col-md-8 timeline__item'>
         <div className='line-content'>
           {children}
         </div>
       </div>
-      <div className='col-md-1 hidden-sm hidden-xs' />
+      <div className='col-1 d-sm-none d-md-block' />
     </div>
   );
 

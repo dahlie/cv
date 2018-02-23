@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Row, Separator } from '../Layout';
 import Item from '../Item';
@@ -10,7 +10,7 @@ export default class Section extends React.PureComponent {
     const { id, title, items } = this.props;
 
     return (
-      <section className={'timeline ' + id}>
+      <Fragment>
         <Separator />
         <Row rowType='title'>
           <h2 className='section__title'>{title}</h2>
@@ -21,7 +21,7 @@ export default class Section extends React.PureComponent {
               <Item {...item} />
             </Row>)
         }
-      </section>
+      </Fragment>
     )
   }
 }

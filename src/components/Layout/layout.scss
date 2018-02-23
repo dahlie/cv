@@ -4,12 +4,12 @@
 }
 
 .timeline__margin {
-  height: 100px;
+  height: 50px;
 }
 
 .timeline__item,
 .timeline__space {
-  padding: 10px 0;
+  padding: 10px 0 !important;
 }
 
 .timeline__title {
@@ -25,6 +25,12 @@
   height: 100px;
 }
 
+@media (min-width: 767px) {
+  .timeline__margin {
+    height: 100px;
+  }
+}
+
 @media (min-width: 992px) {
   .timeline__wrap {
     top: -74px;
@@ -32,10 +38,6 @@
 
   .timeline__margin {
     height: 100px;
-  }
-
-  .row {
-    display: flex;
   }
 }
 
