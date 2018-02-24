@@ -1,7 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyWebpackPlugin = require("uglifyjs-webpack-plugin");
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -29,43 +32,50 @@ const commonConfig = {
     new HtmlWebpackPlugin({
       title: 'CV',
       template: PATHS.template
-    })
+    }),
+    new ExtractTextPlugin('styles.css')
   ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/        
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader']
-      },      
-      {
-        test: /\.scss$/,
-        loader: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: function() {
-                return [
-                  require('autoprefixer')
-                ];
-              }
-            }
-          },
-          'sass-loader'
-        ]
+        loader: ExtractTextPlugin.extract(['css-loader'])
       },
       {
-        test: /\.(ttf|eot|woff|woff2|svg|png)$/,
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: function() {
+                  return [
+                    require('autoprefixer')
+                  ];
+                }
+              }
+            },
+            'sass-loader'
+          ]
+        })
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'
         }
+      },
+      {
+        test: /\.(svg|png)$/,
+        loader: 'url-loader',
       }
     ]
   }
@@ -73,9 +83,9 @@ const commonConfig = {
 
 const devConfig = {
   devServer: {
-    contentBase: PATHS.assets,    
+    contentBase: PATHS.assets,
     stats: 'errors-only',
-    overlay: {      
+    overlay: {
       errors: true,
       warnings: true
     }
@@ -83,7 +93,13 @@ const devConfig = {
 };
 
 const productionConfig = {
-
+  plugins: [
+    new CopyWebpackPlugin([{
+      from: path.join(PATHS.assets, 'pics', 'profile-pic.jpg'),
+      to: path.join(PATHS.build, 'pics', 'profile-pic.jpg')
+    }]),
+    new UglifyWebpackPlugin()
+  ]
 };
 
 module.exports = env => {
