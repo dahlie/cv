@@ -8,31 +8,32 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
 
-  .intro__header {
-    font-size: 54px;
-    letter-spacing: -1pt;
-    padding-bottom: 10px;
-    font-weight: 200;
-    border-bottom: 1px solid #09afad;
-  }
+.header {
+  font-size: 54px;
+  letter-spacing: -1pt;
+  padding-bottom: 10px;
+  font-weight: 200;
+  border-bottom: 1px solid #09afad;
+}
 
-  .intro__header-name {
-    font-weight: bold;
-    color: #09afad;
-    
-    &:before {
-      content: " ";
-    }
-  }
+.header-name {
+  font-weight: 400;
+  color: #09afad;
 
-  .intro__title {
-    color: #555555;
-    font-size: 20px;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 15px;
+  &:before {
+    content: " ";
   }
+}
+
+.title {
+  color: #555555;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 200;
 }
 
 .profile-pic {
@@ -43,7 +44,7 @@
   overflow: hidden;
   width: 210px;
   height: 210px;
-  
+
   img {
     margin-top: 8px;
     width: 188px;
@@ -59,10 +60,8 @@
 }
 
 @media (max-width: 767px) {
-  .intro {
-    .intro__header {
-      font-size: 40px;
-    }
+  .header {
+    font-size: 40px;
   }
 }
 

@@ -51,7 +51,14 @@ const commonConfig = {
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                importLoaders: 2,
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
+            },
             {
               loader: 'postcss-loader',
               options: {
@@ -67,14 +74,14 @@ const commonConfig = {
         })
       },
       {
-        test: /\.(ttf|eot|woff|woff2)$/,
+        test: /\.(ttf|eot|woff|woff2|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: 'fonts/[name].[ext]'
         }
       },
       {
-        test: /\.(svg|png)$/,
+        test: /\.png$/,
         loader: 'url-loader',
       }
     ]

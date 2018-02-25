@@ -1,34 +1,73 @@
-.section__button-container {
+.title {
+  color: #031634;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.subtitle {
+  color: #777777;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  :global(.fa) + span:before {
+    content: " ";
+  }
+}
+
+.content {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.button-container {
   margin-top: 5px;
 }
 
-.skills__list {
+.skills-list {
   list-style-type: none;
   padding: 0;
 
-  li {
+  .skill {
     font-weight: bold;
     margin-bottom: 15px;
   }
 }
 
-.skills__desc {
+.description {
   font-weight: normal;
-  
+
   &:before {
     content: ": ";
   }
 }
 
-.btn {
+.time {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 200;
+
+  &:before {
+    content: " - ";
+  }
+}
+
+.keywords {
+  margin-top: 30px;
+  color: #777777;
+}
+
+:global(.btn).link-button {
   margin-right: 3px;
   height: 30px;
   line-height: 30px;
   padding-top: 0;
   color: #fafafa;
-
-  &.btn-default {
-    background: #031634;
-    border: #031634; 
-  }
+  background: #031634;
+  border: #031634;
 }

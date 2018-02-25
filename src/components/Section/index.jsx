@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { Row, Separator } from '../Layout';
 import Item from '../Item';
 
-import './section.scss';
+import styles from './section.scss';
 
 export default class Section extends React.PureComponent {
   render() {
@@ -13,7 +13,7 @@ export default class Section extends React.PureComponent {
       <Fragment>
         <Separator />
         <Row rowType='title'>
-          <h2 className='section__title'>{title}</h2>
+          <h2 className={styles.title}>{title}</h2>
         </Row>
         {
           items.map((item, index) =>

@@ -4,19 +4,12 @@ import Intro from '../Intro';
 import Section from '../Section';
 import { Terminator } from '../Layout';
 
-import './profile.scss';
+const Profile = ({ data }) => (
+  <div className="container">
+    <Intro {...data.personal} />
+    {data.sections.map((section, index) => <Section key={index} {...section} /> )}
+    <Terminator />
+  </div>
+);
 
-export default class Profile extends React.PureComponent {
-  render() {
-    const { data } = this.props;
-    const { personal, sections } = data;
-
-    return (
-      <div className="container">
-        <Intro {...personal} />
-        {sections.map((section, index) => <Section key={index} {...section} /> )}
-        <Terminator />
-      </div>
-    )
-  }
-}
+export default Profile;

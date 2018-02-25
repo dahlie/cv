@@ -7,14 +7,14 @@
   "scripts": {
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
-    "analyze": "webpack --env development",
-    "deploy": "gh-pages"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "keywords": [
-    "cv"
+    "cv", "overkill"
   ],
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

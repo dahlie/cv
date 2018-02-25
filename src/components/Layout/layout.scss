@@ -1,48 +1,33 @@
-.timeline__wrap {
-  position: relative;
-  top: 0px;
-}
-
-.timeline__margin {
+.separator {
   height: 50px;
 }
 
-.timeline__item,
-.timeline__space {
+.item,
+.space {
   padding: 10px 0 !important;
 }
 
-.timeline__title {
+.title {
   background: url('../../assets/pics/section.png') no-repeat center center;
 }
 
-.timeline__progress {
+.progress {
   background: url('../../assets/pics/timeline.png') repeat-y center center;
 }
 
-.timeline__end {
+.end {
   background: url('../../assets/pics/end.png') no-repeat center center;
   height: 100px;
 }
 
 @media (min-width: 767px) {
-  .timeline__margin {
+  .margin {
     height: 100px;
   }
 }
 
 @media (min-width: 992px) {
-  .timeline__wrap {
-    top: -74px;
-  }
-
-  .timeline__margin {
+  .margin {
     height: 100px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .timeline__wrap {
-    top: 0px;
   }
 }
